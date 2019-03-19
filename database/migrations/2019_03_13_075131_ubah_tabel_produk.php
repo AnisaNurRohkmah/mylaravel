@@ -4,20 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTprodukTable extends Migration
+class UbahTabelProduk extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('tproduk', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-        });
-    }
+public function up()
+{
+Schema::rename('produks', 'barangs');
+}
 
     /**
      * Reverse the migrations.
@@ -26,6 +23,6 @@ class CreateTprodukTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tproduk');
+        //
     }
 }
